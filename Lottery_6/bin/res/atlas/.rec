@@ -1,0 +1,33 @@
+D .
+D ui
+R 23B06D14 bg.jpg
+P 8034ECAE btn-1-1.png
+P 46524E26 btn-1.png
+P 9DE2B99E btn-2-1.png
+P C960289F btn-2.png
+R 68CF974A cont-bg.png
+R F0BE8534 hint.png
+P 1A87F7D0 ico-1.png
+P CA6E5F04 ico-btn.png
+P A8F80554 Image.png
+P 74E6717D img-bg-1.png
+P 6C3B05AF img-bg-2.png
+R C85C5BDA light-1.png
+R E87BC073 light-10.png
+R 3C1DB119 light-2.png
+R 187FFF58 light-20.png
+R 72E547E4 rule.png
+R EA13D67B winning-bg.png
+D ui/avatar
+P 5095C024 13e33182a5b29532!400x400_big.jpg
+P BB4518ED 293b16abef4eb814!400x400_big.jpg
+P D19086C4 7fc1995ea79f0b3f!400x400_big.jpg
+P 8D7F7121 80259f821c4afb2f!400x400_big.jpg
+P 05C4A65F 852578a55f7be00f!400x400_big.jpg
+P 1A6F2931 afc29da0ce3dfeac!400x400_big.jpg
+P F184D929 avatar.jpg
+P 89513946 b51e0990c011d620!400x400_big.jpg
+P DB2DE8B6 c656afe42191055d!400x400_big.jpg
+P D49B3B94 ef7c945ff1c236f8!400x400_big.jpg
+P D83AC906 f069a233da408317!400x400_big.jpg
+P DD539E25 f8bf4465e7cde63d!400x400_big.jpg

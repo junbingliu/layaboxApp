@@ -1,0 +1,7 @@
+{
+    "libs_namespace": "xinjingLotteryServer",
+    "libs": ["services/XinJingLotteryService.jsx", "services/XinJingLotteryUtil.jsx", "services/XinJingLotteryQuery.jsx"],
+    "obj_prefixes": ["xinjingLotteryServerObj"],
+    "list_prefixes": ["xinjingLotteryServerList"]
+
+}

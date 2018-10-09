@@ -1,0 +1,25 @@
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<table class="table table-bordered table-over">
+    <thead>
+    <tr class="active">
+        <th width="100px;" style="display: none;">ID</th>
+        <th width="160px;">活动名称</th>
+        <th width="100px;">创建时间</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{~it.recordList:value:index}}
+    <tr>
+        <td style="display: none;">{{=value.id}}</td>
+        <td>{{=value.name}}</td>
+        <td>{{=value.formatCreateTime}}</td>
+    </tr>
+    {{~}}
+    </tbody>
+</table>
+<div class="pagination_params" totalPages="{{=it.pageParams.totalPages}}"
+     currentPage="{{=it.pageParams.currentPage}}" totalRecords="{{=it.pageParams.totalRecords}}"
+     displayNum="{{=it.pageParams.displayNum}}" pageLimit="{{=it.pageParams.pageLimit}}"
+     recordType="{{=it.pageParams.recordType}}">
+</div>

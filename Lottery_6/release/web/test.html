@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>无标题文档</title>
+
+</head>
+
+<body >
+
+<ul id='showInfo'>
+
+<script type="text/template" charset="utf-8" id='template_1'>
+
+{{if( it && it.length>0 ){ }}
+
+{{for(var i=0; i<it.length; i++){ }}
+
+<li>{{=it[i].name}}</li>
+
+{{ } }}
+
+{{ }else{ }}
+
+<li><span style="color:white; text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;">cheese</span></li>
+
+{{ } }}
+
+</script>
+
+</ul>
+
+<br>
+
+<hr >
+
+<br>
+
+<ul id='showInfo2'>
+
+</ul>
+
+</body>
+<script type="text/javascript" charset="utf-8" src='res/myLib/doT.min.js'></script>
+
+<script type="text/javascript" charset="utf-8">
+
+var template=document.getElementById('template_1').innerHTML;
+
+var obj=[{name:'d1'},{name:'d2'},{name:'d3'}];
+
+//传递一个有数据的数组进去
+
+document.getElementById('showInfo').innerHTML=doT.template( template )( obj );
+
+//传入的数据为空
+
+document.getElementById('showInfo2').innerHTML=doT.template( template )( [] );
+
+</script>
+
+</html>

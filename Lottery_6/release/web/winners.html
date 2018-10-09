@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>winners</title>
+<script type="text/javascript" src="res/myLib/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="res/myLib/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="res/myLib/bootstrap.min.css" rel="stylesheet">
+<script type="text/javascript" src="res/myLib/doT.min.js"></script>
+</head>
+<body>
+  <table class="table table-striped table-hover" id="showInfo">
+    <script type="text/template" charset="utf-8" id="template">
+    <caption>中奖名单</caption>
+    <thead>
+      <tr>
+        <th>序号</th>
+        <th>头像</th>
+        <th>昵称</th>
+        <th>奖项</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{~it.recordList:value:index}}
+      <tr>
+        <th scope="row">{{=index+1}}</th>
+        <td></td>
+        <td >{{=value.nickName}}</td>
+        <td >{{=value.prize}}</td>
+      </tr>
+      {{~}}
+    </tbody>
+    </script>
+  </table>
+<script type="text/javascript" charset="utf-8">
+    var template=document.getElementById('template').innerHTML;
+    $.post("/LotteryServer/getData.jsx","", 
+      function (data) {
+          document.getElementById('showInfo').innerHTML=doT.template(template)(data);
+      }, "json");
+</script>
+</body>
+</html>

@@ -1,0 +1,1549 @@
+@charset "utf-8";
+
+/* 防止用户自定义背景颜色对网页的影响，添加让用户可以自定义字体 */
+
+html {
+    color: #333;
+    /*background: #ededed;*/
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: none;
+}
+
+body {
+    -webkit-overflow-scrolling: touch;
+}
+
+/* 内外边距通常让各个浏览器样式的表现位置不同 */
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+section,
+article,
+aside,
+details,
+figcaption,
+header,
+footer,
+nav,
+dialog,
+figure,
+menu {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    background: #f0f3f5;
+}
+
+/* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG) */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+    display: block;
+}
+
+/* HTML5 媒体文件跟 img 保持一致 */
+
+audio,
+canvas,
+video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+/* 要注意表单元素并不继承父级 font 的问题 */
+
+body,
+button,
+input,
+select,
+textarea {
+    font: 14px Arial, Helvetica, STHeiTi, sans-serif;
+    /*font: 500 14px/1.8 Lucida, Verdana, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;*/
+}
+
+/* IE6 Button 宽度自适应 */
+
+button,
+input {
+    *width: auto;
+    *overflow: visible;
+}
+
+/* 去掉各Table  cell 的边距并让其边重合 */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* IE bug fixed: th 不继承 text-align*/
+
+th {
+    text-align: inherit;
+}
+
+caption,
+th {
+    text-align: left
+}
+
+/* 去除默认边框 */
+
+fieldset,
+img {
+    border: 0;
+}
+
+img {
+    border: 0;
+    max-width: 100%;
+}
+
+input,
+img {
+    vertical-align: middle;
+}
+
+/* 一致的 del 样式 */
+
+del {
+    text-decoration: line-through;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+    font-style: normal;
+    font-weight: 400;
+}
+
+/* 去掉列表前的标识, li 会继承，大部分网站通常用列表来很多内容，所以应该当去 */
+
+ul,
+ol {
+    list-style: none;
+}
+
+em,
+i {
+    font-style: normal
+}
+
+/* 默认不显示下划线，保持页面简洁 */
+
+ins,
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:active {
+    /*opacity: .7*/
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 500;
+    font-weight: 800 \9;
+    color: #333;
+}
+
+/* 去除 webkit 中 input 和 textarea 的默认样式  */
+
+.typo-input,
+.typo-textarea {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+* {
+    outline: 0;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-box-sizing: border-box;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+    color: #ccc;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: #ccc;
+}
+
+input:-webkit-input-placeholder,
+textarea:-webkit-input-placeholder {
+    color: #ccc;
+}
+
+input {
+    -webkit-appearance: none;
+    /*去除input默认样式*/
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="input"],
+input {
+    -webkit-appearance: none;
+}
+
+input {
+    -webkit-appearance: none !important;
+    border-radius: 0;
+}
+
+textarea {
+    color: #ccc;
+}
+
+textarea:focus {
+    color: #666;
+}
+
+.textInput {
+    display: inline-block;
+    min-height: 1.325rem;
+    line-height: 1.325rem;
+    font-size: 0.7rem;
+    border-radius: 0.15rem;
+    color: #aaa;
+    background: #fff;
+    border: 1px solid #dadada;
+}
+
+.textInput:focus {
+    outline: none;
+    color: #333;
+}
+
+select {
+    -webkit-appearance: none !important;
+    border-radius: 0;
+    -webkit-appearance: menulist;
+    -webkit-box-sizing: border-box;
+    -webkit-box-align: center;
+    border: 1px solid;
+    white-space: pre;
+    -webkit-rtl-ordering: logical;
+    background-color: white;
+    cursor: default;
+}
+
+html {
+    font-size: 20px;
+}
+
+@media (min-width: 320px) {
+    html {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 360px) {
+    html {
+        font-size: 23px;
+    }
+}
+
+@media (min-width: 375px) {
+    html {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 384px) {
+    html {
+        font-size: 24.5px;
+    }
+}
+
+@media (min-width: 400px) {
+    html {
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 414px) {
+    html {
+        font-size: 25.875px;
+    }
+}
+
+@media (min-width: 424px) {
+    html {
+        font-size: 26.5px;
+    }
+}
+
+@media (min-width: 480px) {
+    html {
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 540px) {
+    html {
+        font-size: 33.75px;
+    }
+}
+
+@media (min-width: 640px) {
+    html {
+        font-size: 40px;
+    }
+}
+
+/* 结构类common */
+
+/*#html {
+  font-size: 20px;
+}
+}*/
+
+.container {
+    width: 100%;
+    max-width: 640px;
+    min-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.rowspace {
+    padding: 0 0.5rem;
+}
+
+.row30 {
+    padding: 0 0.75rem;
+}
+
+.row {
+    position: relative;
+}
+
+/* 基类样式 shadow */
+
+.shadow {
+    -moz-box-shadow: 0px 2px 2px #e7e7e7;
+    -webkit-box-shadow: 0px 2px 2px #e7e7e7;
+    box-shadow: 0px 2px 2px #e7e7e7;
+}
+
+.corBright {
+    color: #e70012;
+}
+
+.cor999 {
+    color: #999 !important;
+}
+
+.cor666 {
+    color: #666;
+}
+
+.cor555 {
+    color: #555 !important;
+}
+
+.cor333 {
+    color: #333 !important;
+}
+
+.corbbb {
+    color: #bbb !important;
+}
+
+.coraaa {
+    color: #aaa !important;
+}
+
+.corccc {
+    color: #ccc !important;
+}
+
+.Cgray {
+    color: #aaa !important;
+}
+
+.corGreen {
+    color: #0bba07;
+}
+
+.width100 {
+    width: 100%;
+}
+
+.width66 {
+    width: 66.37%;
+}
+
+.width33 {
+    width: 33%;
+}
+
+.width40 {
+    width: 40%;
+}
+
+.width60 {
+    width: 60%;
+}
+
+.Contcenter {
+    text-align: center;
+}
+
+.Contright {
+    text-align: right;
+}
+
+.Contleft {
+    text-align: left;
+}
+
+.pr {
+    position: relative;
+}
+
+.pa {
+    position: absolute;
+}
+
+.pf {
+    position: fixed;
+}
+
+.borLeft {
+    border-left: 1px #e0e0e0 solid;
+}
+
+.borBottom {
+    border-bottom: 1px #e0e0e0 solid;
+}
+
+.borTop {
+    border-top: 1px #e0e0e0 solid;
+}
+
+.borRight {
+    border-right: 1px #e0e0e0 solid;
+}
+
+.border {
+    border: 1px #e0e0e0 solid;
+}
+
+.originalPrice {
+    text-decoration: line-through;
+}
+
+.noborder {
+    border: none !important;
+}
+
+.noborR {
+    border-right: none !important;
+}
+
+.bg {
+    background: #fff;
+}
+
+.nobg {
+    background: none !important;
+}
+
+.mt5 {
+    margin-top: 0.125rem !important;
+}
+
+.mt10 {
+    margin-top: 0.25rem !important;
+}
+
+.mt20 {
+    margin-top: 0.5rem !important;
+}
+
+.mt30 {
+    margin-top: 0.75rem !important;
+}
+
+.mt40 {
+    margin-top: 1rem !important;
+}
+
+.pt12 {
+    padding-top: 0.3rem !important;
+}
+
+.pt20 {
+    padding-top: 0.5rem !important;
+}
+
+.pt50 {
+    padding-top: 1.25rem !important;
+}
+
+.mt2 {
+    margin-top: 0.05rem !important;
+}
+
+.mt3 {
+    margin-top: 0.075rem !important;
+}
+
+.mt4 {
+    margin-top: 0.1rem !important;
+}
+
+.mt5 {
+    margin-top: 0.125rem;
+}
+
+.mt10 {
+    margin-top: 0.25rem;
+}
+
+.mt16 {
+    margin-top: 0.4rem !important;
+}
+
+.ml2 {
+    margin-left: 0.05rem !important;
+}
+
+.ml5 {
+    margin-left: 0.125rem;
+}
+
+.ml10 {
+    margin-left: 0.25rem !important;
+}
+
+.ml20 {
+    margin-left: 0.5rem !important;
+}
+
+.ml26 {
+    margin-left: 0.65rem;
+}
+
+.ml50 {
+    margin-left: 1.25rem;
+}
+
+.mb5 {
+    margin-bottom: 0.125rem;
+}
+
+.mb10 {
+    margin-bottom: 0.25rem;
+}
+
+.mb30 {
+    margin-bottom: 0.75rem;
+}
+
+.mb40 {
+    margin-bottom: 1rem;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right !important;
+}
+
+.hide {
+    display: none;
+}
+
+.vis-hide {
+    visibility: hidden;
+}
+
+/*.flex{
+  display:-webkit-box;
+}*/
+
+.wk-box {
+    display: -webkit-box;
+}
+
+.wk-flex {
+    display: -webkit-flex;
+}
+
+.wbox-flex {
+    -webkit-flex: 1 !important;
+    -webkit-box-flex: 1;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.box-horizontal {
+    -moz-box-orient: horizontal;
+    -webkit-box-orient: horizontal;
+    box-orient: horizontal;
+}
+
+.hor-view {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+}
+
+.ver-view {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+
+.box-vertical {
+    -moz-box-orient: vertical;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+}
+
+.box-direction-reverse {
+    -moz-box-direction: reverse;
+    -webkit-box-direction: reverse;
+    box-direction: reverse;
+}
+
+.fz14 {
+    font-size: 0.35rem !important;
+}
+
+.fz16 {
+    font-size: 0.4rem !important;
+}
+
+.fz18 {
+    font-size: 0.45rem !important;
+}
+
+.fz20 {
+    font-size: 0.5rem !important;
+}
+
+.fz22 {
+    font-size: 0.55rem !important;
+}
+
+.fz24 {
+    font-size: 0.6rem !important;
+}
+
+.fz26 {
+    font-size: 0.65rem !important;
+}
+
+.fz28 {
+    font-size: 0.7rem !important;
+}
+
+.fz30 {
+    font-size: 0.75rem !important;
+}
+
+.fz32 {
+    font-size: 0.8rem !important;
+}
+
+.fz34 {
+    font-size: 0.85rem !important;
+}
+
+.fz36 {
+    font-size: 0.9rem !important;
+}
+
+.fz40 {
+    font-size: 1rem !important;
+}
+
+.fz44 {
+    font-size: 1.1rem !important;
+}
+
+.fz48 {
+    font-size: 1.2rem !important;
+}
+
+.fz50 {
+    font-size: 1.25rem !important;
+}
+
+.fz52 {
+    font-size: 1.3rem !important;
+}
+
+/*通用变量*/
+
+.newHead {
+    width: 100%;
+    margin: auto;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    background: #FFF;
+}
+
+.w-nav {
+    width: 100%;
+    height: 2.25rem;
+    background: #fff;
+    border-bottom: #e0e0e0 1px solid;
+    position: relative;
+}
+
+.w-nav-back {
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* width: 1.85rem; */
+    height: 2.25rem;
+    z-index: 99;
+}
+
+.icon-back {
+    content: "";
+    display: inline-block;
+    background-image: url(../images/w_nav_back.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 0.55rem;
+    height: 1.175rem;
+    margin: 0.68rem 0.6rem 0 0.65rem;
+}
+
+.w-nav-title {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 0.85rem;
+    line-height: 2.25rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -webkit-text-overflow: ellipsis;
+    -moz-text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/*.rowTop {*/
+     /*padding: 2.2rem 0 0 0;*/
+ /*}*/
+
+.lottery {
+    background: #e60012 url(../images/bg.jpg) no-repeat;
+    background-size: 100%;
+    width: 100%;
+    padding: 0 0.5rem 2rem;
+}
+
+.rotary {
+    padding-top: 0.5rem;
+
+}
+
+.rotary .play {
+    width: 12rem;
+    height: 2.575rem;
+    margin: 0 auto;
+    background: url(../images/print-1.png) no-repeat;
+    background-size: 100%;
+    line-height: 2.35rem;
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #f2090a;
+}
+
+.record {
+    margin: 0.5rem 0.25rem 0;
+    background: #fff;
+}
+
+.record em {
+    color: #666;
+    font-size: 0.7rem;
+    padding-left: 0.5rem;
+}
+
+.record .import {
+    border: 1px solid #dfdfdd;
+}
+
+.record input {
+    height: 2.125rem;
+    border: none;
+    width: 85%;
+    padding: 0 8px;
+    font-size: 0.6rem;
+    color: #333;
+}
+
+.button {
+    width: 6.8rem;
+    height: 1.8rem;
+    background: url(../images/print-2.png) no-repeat;
+    margin: 0.9rem auto 0;
+    background-size: 100%;
+    line-height: 1.8rem;
+    color: #fff6b9;
+    font-size: 0.7rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.button:active {
+    background: url(../images/print-2-2.png) no-repeat;
+    background-size: 100%;
+}
+
+.awards {
+    background: #fff6e5;
+    padding: 0.25rem;
+    margin-top: 0.25rem;
+}
+
+.awards .inner {
+    border: 2px solid #f33745;
+    /*height: 10.75rem;*/
+    position: relative;
+    padding: 0.5rem;
+}
+
+.awards .inner .ico-side {
+    height: 1.4rem;
+    position: absolute;
+    width: 1.375rem;
+}
+
+.awards .inner .ico-side img {
+    height: 100%;
+    width: 1.375rem;
+}
+
+.awards .inner .ico-side.side-1 {
+    top: 0.175rem;
+    left: 0.175rem;
+}
+
+.awards .inner .ico-side.side-2 {
+    top: 0.175rem;
+    right: 0.175rem;
+}
+
+.awards .inner .ico-side.side-3 {
+    bottom: 0.175rem;
+    left: 0.175rem;
+}
+
+.awards .inner .ico-side.side-4 {
+    bottom: 0.175rem;
+    right: 0.175rem;
+}
+
+.awards .inner h3 {
+    text-align: center;
+    font-size: 0.6rem;
+}
+
+.awards .inner ul {
+    table-layout: fixed;
+    white-space: nowrap;
+    width: auto;
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+.awards .inner .item {
+    width: 33.3%;
+    padding-right: 0.375rem;
+    display: inline-block;
+}
+
+.awards .inner .item .check {
+    margin: 0 auto;
+    width: 0.875rem;
+    height: 0.875rem;
+}
+
+.check {
+    background: url(../images/check.png) no-repeat;
+    background-size: 100% 100%;
+    width: 1.125rem;
+    height: 1.125rem;
+}
+
+.checkcur {
+    background: url(../images/checkcur.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.inner .item .prize {
+    width: 100%;
+    height: 3.9rem;
+    margin: 0.25rem 0;
+    overflow: hidden;
+    /*background: url(../images/315x315-bg.jpg) no-repeat;*/
+    background-size: 100%;
+}
+.inner .item .prize img{
+    height:100%;
+    width:100%;
+}
+.inner .item .txt {
+    font-size: 0.6rem;
+    color: #666;
+    text-align: center;
+}
+
+.inner .item .txt em {
+    font-weight: bold;
+    color: #f2090a;
+}
+
+.awards .inner .affirm {
+    width: 3.075rem;
+    height: 1.25rem;
+    margin: 0.65rem auto 0;
+    background: url(../images/print-8.png) no-repeat;
+    background-size: 100%;
+}
+
+.awards .inner .result .left {
+    width: 4.1rem;
+    height: 4.1rem;
+    float: left;
+    margin-left: 1.6rem;
+    overflow: hidden;
+}
+.awards .inner .result .left img{
+    height:100%;
+    width: 100%;
+}
+
+.awards .inner .result .right {
+    line-height: 0.7rem;
+    font-size: 0.6rem;
+    float: left;
+    margin:  1.25rem 0;
+    width:35%;
+    text-align: center;
+}
+
+.awards .inner .result .right em {
+    font-weight: bold;
+    color: #f2090a;
+}
+
+.awards .inner .list {
+    max-height: 13.5rem;
+    overflow-y: auto;
+    margin: 0.25rem 0.5rem;
+    font-size: 0.6rem;
+}
+
+.awards .inner .list .item-2 {
+    border-bottom: 1px solid #e8e8e8;
+    padding: 0.35rem 0;
+    position: relative;
+}
+
+.awards .inner .list .item-2 .name {
+    display: inline-block;
+    width: 3rem;
+}
+
+.awards .inner .list .item-2 .number {
+    width: 5.375rem;
+    display: inline-block;
+
+}
+
+.awards .inner .list .item-2 .ico-del {
+    width: 3.075rem;
+    height: 1.25rem;
+    background: url(../images/print-10.png) no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.awards .inner .list .item-2 .fl {
+    margin-top: -0.25rem;
+}
+
+.awards .inner .list .item-2 .win {
+    width: 3.15rem;
+    display: inline-block;
+    font-weight: bold;
+    color: #f2090a;
+    float: left;
+}
+
+.awards .inner .list .item-2 .user {
+    line-height: 1.5rem;
+    position: relative;
+}
+
+.awards .inner .list .item-2 .user em {
+    width: 0.75rem;
+    height: 0.75rem;
+    display: inline-block;
+    background: url(../images/close_icon.png) no-repeat;
+    background-size: 100%;
+    margin-bottom: 0.15rem;
+    position: absolute;
+    right: 0;
+    top: 0.35rem;
+}
+
+.TB_overlayBG {
+    background: rgba(0, 0, 0, 0.65);
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.TB_window {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+}
+
+.popup {
+    width: 13.5rem;
+    background: #fff;
+    border-radius: 0.3rem;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+}
+
+.popup .panel-msg {
+    padding: 1.35rem 1.35rem;
+    text-align: left;
+    color: #333;
+}
+
+.popup .panel-btn {
+    padding: 0;
+    margin: 0;
+    border: none;
+    line-height: 2.25rem;
+    text-align: center;
+}
+
+.popup .panel-btn a {
+    width: 50%;
+    border: none;
+    border-radius: inherit;
+    height: 2.25rem;
+    line-height: 2.25rem;
+    float: left;
+    display: inline-block;
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+.popup .panel-btn a.panel-cancel {
+    border-top: 1px solid #ebebeb;
+    color: #333;
+}
+
+.popup .panel-btn a.panel-ensure {
+    background: #f2090a;
+    color: #fff;
+}
+
+.rotary .my-item {
+    width: 33.3%;
+    height: 2.25rem;
+    font-size: 0.6rem;
+}
+
+.rotary .my-item.mi-1 {
+    background: url(../images/launch-1.png) no-repeat;
+    background-size: 100%;
+}
+
+.rotary .my-item.mi-1.active {
+    background: url(../images/launch-1.jpg) no-repeat;
+    background-size: 100%;
+}
+
+.rotary .my-item.mi-2 {
+    background: url(../images/launch-2.png) no-repeat;
+    background-size: 100%;
+}
+
+.rotary .my-item.mi-2.active {
+    background: url(../images/launch-2.jpg) no-repeat;
+    background-size: 100%;
+}
+
+.rotary .my-item.mi-3 {
+    background: url(../images/launch-3.png) no-repeat;
+    background-size: 100%;
+}
+
+.rotary .my-item.mi-3.active {
+    background: url(../images/launch-3.jpg) no-repeat;
+    background-size: 100%;
+}
+
+.rotary .my-item a p {
+    color: #fcae8a;
+    text-align: center;
+    width: 100%;
+    margin-top: 1.3rem;
+    font-family: "宋体";
+}
+
+.rotary .my-item.active a p {
+    display: inline-block;
+    color: #f7ef92;
+    font-weight: bold;
+
+}
+
+.awards .inner .list.my-enter .item-2 .number {
+    font-weight: bold;
+    color: #f2090a;
+    width: 40%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+}
+
+.awards .inner .list.my-enter .item-2 .arrows {
+    position: absolute;
+    right: 0;
+    top: 0.5rem;;
+    width: 0.3rem;
+    height: 0.58rem;
+    display: inline-block;
+    background: url(../images/ico-arrows.png) no-repeat;
+    background-size: 100%;
+    vertical-align: middle;
+    margin-left: 0.25rem;
+
+}
+
+.prize .awards {
+    margin-bottom: 0.5rem;
+}
+
+.awards .inner .hint {
+    padding: 2.5rem 0;
+
+}
+
+.awards .inner .hint .hint-pic {
+    width: 8.8rem;
+    height: 5.1rem;
+    margin: 0 auto;
+}
+
+.awards .inner .hint .txt {
+    margin-top: 1rem;
+    font-size: 0.6rem;
+    text-align: center;
+}
+
+.awards .inner .sponsor {
+    padding: 0.5rem;
+    font-size: 0.6rem;
+}
+
+.sponsor .settings {
+    border-bottom: 1px solid #e8e8e8;
+    padding: 0.375rem 0;
+    /*line-height: 2rem;*/
+}
+
+.sponsor .settings .name {
+    color: #666;
+}
+
+.sponsor input, .sponsor select {
+    width: 73%;
+    display: inline-block;
+    border: 1px solid #e8e8e8;
+    border-radius: 3px;
+    height: 1.25rem;
+    padding: 0 0.125rem;
+    background: #fff;
+}
+
+.sponsor .txt {
+    margin-bottom: 0.25rem;
+}
+
+.sponsor .add-cont .cont {
+    background: #fff;
+    padding: 0.25rem 0.5rem 0;
+    margin-bottom: 0.5rem;
+}
+
+.sponsor .add-cont .cont:last-child {
+    margin-bottom: 0;
+}
+
+.sponsor .cont .settings {
+    border: none;
+    padding-bottom: 0;
+}
+
+.sponsor .cont input, .sponsor .cont select {
+    width: 70%;
+}
+
+.sponsor .cont .add-prize {
+    padding: 0.25rem 0;
+    border-bottom: 1px solid #e8e8e8;
+
+}
+
+.sponsor .cont .add-prize .txt {
+    margin-top: 0.5rem;
+    display: inline-block;
+}
+
+.sponsor .cont .add-prize .add {
+    table-layout: fixed;
+    white-space: nowrap;
+    width: auto;
+    overflow: hidden;
+    overflow-x: auto;
+    width: 72%;
+    float: right;
+    padding: 0.25rem;
+}
+
+.sponsor .cont .add-prize .item {
+    display: inline-block;
+    width: 33.3%;
+    padding-right: 0.25rem;
+    overflow: hidden;
+}
+
+
+.sponsor .cont .add-prize .item img {
+    width: 100%;
+    height: 100%;
+
+}
+
+.sponsor .del-btn {
+    padding: 0.375rem 0;
+    font-size: 0.6rem;
+    color: #666;
+}
+
+.sponsor .del-btn .btn-ico {
+    height: 1.2rem;
+    padding: 0 0.25rem;
+    border: 1px solid #d7d7d7;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 1.25rem;
+    margin-left: 0.25rem;
+}
+
+.del-btn .btn-ico em {
+    display: inline-block;
+    width: 0.8rem;
+    height: 0.8rem;
+    vertical-align: sub;
+    background: url(../images/ico-del.png) no-repeat;
+    background-size: 100%;
+}
+
+.describe {
+    padding: 0.5rem;
+}
+
+.describe textarea {
+    width: 70%;
+    height: 5rem;
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+    padding: 0.25rem;
+    float: right;
+}
+
+.sponsor .add-btn {
+    background: #fff;
+    margin-top: 0.5rem;
+    border: 1px solid #d7d7d7;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+.sponsor .add-btn .add-ico {
+    display: inline-block;
+    width: 0.8rem;
+    height: 0.8rem;
+    vertical-align: sub;
+    background: url(../images/ico-gift.png) no-repeat;
+    background-size: 100%;
+    margin-right: 0.25rem;
+}
+
+/*提示层*/
+.alertLayer {
+    position: fixed;
+    left: 0;
+    top: 40%;
+    text-align: center;
+    width: 100%;
+    z-index: 999;
+}
+
+.alertBox {
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 0.5rem;
+    max-width: 7.625rem;
+    /*min-width: 4.5rem;*/
+    padding: 0.75rem 0.65rem;
+    margin: auto;
+    font-size: 0.7rem;
+    color: #fff;
+    -webkit-box-sizing: border-box;
+    text-align: center;
+}
+
+.alertBox.alertBox-since {
+    max-width: 13rem;
+}
+
+.alertBox .ic_gou,
+.alertBox .ic_sigh-1 {
+    display: inline-block;
+    background-image: url(../images/panelTips_gou.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 1.75rem;
+    height: 1.75rem;
+}
+
+.alertBox .ic_sigh-2 {
+    display: inline-block;
+    background: url(../images/panelTips_sigh.png) no-repeat;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 0.5rem;
+    height: 1.75rem;
+}
+
+.alertBox .ic_cry,
+.alertBox .ic_smile {
+    display: inline-block;
+    background: url(../images/face_cry.png) no-repeat;
+    background-size: 100%;
+    width: 1.75rem;
+    height: 1.75rem;
+}
+
+.alertBox .ic_smile {
+    background: url(../images/face_smile.png) no-repeat;
+    background-size: 100%;
+}
+
+.alertBox .alert_msg {
+    display: block;
+    margin-top: 0.2rem;
+    text-align: center;
+}
+
+/* end 提示层*/
+.awards .inner .prize-name{
+    text-align: center;
+    line-height: 1rem;
+    font-size: 0.65rem;
+    color: #f2090a;
+    font-weight: bold;
+    font-family: "微软雅黑";
+    margin-bottom: 0.25rem;
+}
+
+.prize{
+    max-height: 85%;
+    margin-bottom: 0.5rem;
+    overflow-y: auto;
+}
+/**
+新版活动详情
+ */
+.sponsor .settings .xq-name{
+    text-align: center;
+    float: left;
+    margin-top:0.25rem;
+    width: 2.5rem;
+
+}
+.sponsor .settings .xq-name .pic{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.sponsor .settings .xq-name .name{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 0.85rem;
+    text-align: center;
+    height: 0.75rem;
+}
+.sponsor .settings .details {
+    width: 75%;
+    margin:0.2rem 0;
+    padding: 0 0.25rem;
+    float: right;
+    word-wrap: break-word;
+    font-weight: bold;
+    word-break: break-all;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.describe.xq-describe .txt{
+    width: 75%;
+    height: 5rem;
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+    padding: 0.25rem;
+    float: right;
+}
+
+.inner .details-join .tit{
+    text-align: center;
+    line-height: 0.85rem;
+    font-size: 0.6rem;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+}
+.inner .details-join ul{
+     max-height: 7.7rem;
+    min-height: 3.85rem;
+    overflow-y: auto;
+}
+.inner .details-join .item{
+    /*border-bottom: 1px solid #e8e8e8;*/
+    font-size: 0.6rem;
+    line-height: 2rem;
+    float: left;
+    width: 25%;
+    padding: 0.25rem 0.125rem;
+}
+.inner .details-join .item .pic{
+    width: 2.5rem;
+    height: 2.5rem;
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+    vertical-align: middle;
+}
+.inner .details-join .item .name{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 0.85rem;
+    text-align: center;
+}
+.base-link .skip{
+    margin: 0.75rem auto;
+    width: 60%;
+    font-size: 0.6rem;
+    font-weight: bold;
+    color: #f2090a;
+}

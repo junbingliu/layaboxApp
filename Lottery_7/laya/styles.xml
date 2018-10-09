@@ -1,0 +1,4 @@
+<res>
+   <item name="comp/button.png" type="Button" compress="0" pack="0" quality="80" props="sizeGrid=4,43,5,11" picType="0"/>
+   <item name="ui/button.png" type="Button" compress="0" pack="0" quality="80" props="sizeGrid=1,40,3,16" picType="0"/>
+</res>
