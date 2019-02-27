@@ -1,4 +1,4 @@
-var Game=(function(_super){
+(function(_super){
     function Game(){
         Game.super(this)
         this.i=0
@@ -121,7 +121,7 @@ var Game=(function(_super){
         },interval)
     }
 
-    return Game;
+    // return Game;
 })(superUI)
 
 
